@@ -6,11 +6,21 @@
         <title>Formulários</title>
     </head>
     <body>
-        <form>
+        <form name="login" action="login.py" method="POST">
             <label>Nome do Usuário:</label><br/>
-            <input type="text" maxlength="15" placeholder="Digite o nome"/><br/><br/>
+            <input name="usuario" type="text" maxlength="15" placeholder="Digite o nome"/><br/><br/>
             <label>Senha:</label><br/>
-            <input type="password" maxlength="8"/><br/><br/>
+            <input name="senha" type="password" maxlength="8" required/><br/><br/>
+            <select name="Estado">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select><br/><br/>
+            <input type="checkbox" value="SP">São Paulo<br/>
+            <input type="checkbox" value="RJ">Rio de Janeiro<br/>
+            <input type="checkbox" value="MG">Minas Gerais<br/><br/>
+            <input type="radio" value="Python" name="LP">Python<br/>
+            <input type="radio" value="C" name="LP">C#<br/><br/>
             <input type="submit" value="OK"/>
             <input type="reset" value="Limpar"/>
         </form>
